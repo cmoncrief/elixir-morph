@@ -13,7 +13,7 @@ defmodule Morph.Camel do
   end
 
   def to_camel(input, upper) when is_bitstring(input) do
-    unless String.match?(input, ~r/[a-z]/), do: input = String.downcase input
+    input = unless String.match?(input, ~r/[a-z]/), do: String.downcase input
     input = Regex.replace ~r/([-_ .]+)([\w])/, input, fn _, _, p2 -> String.upcase p2 end
     if upper, do: Morph.upper_first(input), else: Morph.lower_first(input)
 
