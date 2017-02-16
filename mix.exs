@@ -19,8 +19,8 @@ defmodule Morph.Mixfile do
   end
 
   defp deps do
-    [{:earmark, ">= 0.0.0", only: :dev},
-    {:ex_doc, "~> 0.11", only: :dev}]
+    [{:earmark, "~> 1.1", only: :dev},
+    {:ex_doc, "~> 0.14", only: :dev}]
   end
 
   defp description do
