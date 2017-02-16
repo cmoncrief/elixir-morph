@@ -83,4 +83,9 @@ defmodule SnakeTest do
   test "don't convert unsupported types to snake caps" do
     assert Morph.to_snake_caps(6) == 6
   end
+
+  test "don't convert empty strings and don't fail on empty strings" do
+    assert Morph.to_snake_caps("") == ""
+  end
+
 end

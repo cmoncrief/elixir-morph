@@ -85,4 +85,9 @@ defmodule CamelTest do
   test "don't convert unsupported types to upper camel case" do
     assert Morph.to_upper_camel(6) == 6
   end
+
+  test "don't convert empty strings and don't fail on empty strings" do
+    assert Morph.to_upper_camel("") == ""
+  end
+
 end

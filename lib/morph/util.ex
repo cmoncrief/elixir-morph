@@ -8,7 +8,7 @@ defmodule Morph.Util do
     to_string [String.upcase(head) | tail]
   end
 
-  def upper_first(""), do: ""
+  def lower_first(""), do: ""
   def lower_first(input) do
     [head | tail] = String.codepoints input
     to_string [String.downcase(head) | tail]

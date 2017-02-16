@@ -51,4 +51,8 @@ defmodule HumanTest do
     assert Morph.to_human(6) == 6
   end
 
+  test "don't convert empty strings and don't fail on empty strings" do
+    assert Morph.to_human("") == ""
+  end
+
 end
