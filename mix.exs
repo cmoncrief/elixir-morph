@@ -18,18 +18,18 @@ defmodule Morph.Mixfile do
     [applications: [:logger]]
   end
 
-  defp deps do
+  defp deps() do
     [{:earmark, "~> 1.1", only: :dev},
     {:ex_doc, "~> 0.14", only: :dev}]
   end
 
-  defp description do
+  defp description() do
     """
     Lightweight string transformations for Elixir.
     """
   end
 
-  defp package do
+  defp package() do
     [
       maintainers: ["Charles Moncrief"],
       licenses: ["BSD"],
