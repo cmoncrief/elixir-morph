@@ -51,4 +51,8 @@ defmodule TitleTest do
     assert Morph.to_title(6) == 6
   end
 
+  test "don't convert empty strings and don't fail on empty strings" do
+    assert Morph.to_title("") == ""
+  end
+
 end
